@@ -1,24 +1,70 @@
-const profile = {
-  username: "Jacob",
-  playTime: 300,
+const sortByDescendingFriendCount = users =>
+  users.toSorted((firstUser, secondUser) => secondUser.friends.length - firstUser.friends.length);
 
-  changeUsername(newName) {
-    this.username = newName;
+const allUsers = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
   },
-
-  updatePlayTime(hours) {
-    this.playTime += hours;
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
   },
-
-  getInfo() {
-    return `${this.username} has ${this.playTime} active hours!`;
+  {
+    name: "Ross Vazquez",
+    email: "rossvasquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
   },
-};
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+  },
+];
 
-console.log(profile.getInfo());
-
-profile.changeUsername("Marco");
-console.log(profile.getInfo());
-
-profile.updatePlayTime(20);
-console.log(profile.getInfo());
+console.log(sortByDescendingFriendCount(allUsers));

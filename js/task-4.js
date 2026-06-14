@@ -1,4 +1,8 @@
-const getUserNames = users => users.map(user => user.name);
+const getTotalBalanceByGender = (users, gender) =>
+  users
+    .filter(user => user.gender === gender)
+    .map(user => user.balance)
+    .reduce((total, balance) => total + balance, 0);
 
 const allUsers = [
   {
@@ -66,4 +70,5 @@ const allUsers = [
   },
 ];
 
-console.log(getUserNames(allUsers));
+console.log(getTotalBalanceByGender(allUsers, "male"));
+console.log(getTotalBalanceByGender(allUsers, "female"));
