@@ -1,6 +1,6 @@
 const getUserNames = users => users.map(user => user.name);
 
-const allUsers = [
+const allUsersTask1 = [
   {
     name: "Moore Hensley",
     email: "moorehensley@indexia.com",
@@ -66,4 +66,4 @@ const allUsers = [
   },
 ];
 
-console.log(getUserNames(allUsers));
+console.log(getUserNames(allUsersTask1));

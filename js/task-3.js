@@ -1,7 +1,7 @@
 const sortByDescendingFriendCount = users =>
   users.toSorted((firstUser, secondUser) => secondUser.friends.length - firstUser.friends.length);
 
-const allUsers = [
+const allUsersTask3 = [
   {
     name: "Moore Hensley",
     email: "moorehensley@indexia.com",
@@ -67,4 +67,4 @@ const allUsers = [
   },
 ];
 
-console.log(sortByDescendingFriendCount(allUsers));
+console.log(sortByDescendingFriendCount(allUsersTask3));

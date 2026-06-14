@@ -1,7 +1,7 @@
 const getUsersWithFriend = (users, friendName) =>
   users.filter(user => user.friends.includes(friendName));
 
-const allUsers = [
+const allUsersTask2 = [
   {
     name: "Moore Hensley",
     email: "moorehensley@indexia.com",
@@ -67,6 +67,6 @@ const allUsers = [
   },
 ];
 
-console.log(getUsersWithFriend(allUsers, "Briana Decker"));
-console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
-console.log(getUsersWithFriend(allUsers, "Adrian Cross"));
+console.log(getUsersWithFriend(allUsersTask2, "Briana Decker"));
+console.log(getUsersWithFriend(allUsersTask2, "Goldie Gentry"));
+console.log(getUsersWithFriend(allUsersTask2, "Adrian Cross"));
